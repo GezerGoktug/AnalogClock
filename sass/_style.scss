@@ -1,0 +1,77 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(4, 38, 67);
+}
+.container {
+  height: 100%;
+  margin: 0 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  border: 3px rgb(153, 153, 153) double;
+  box-shadow: 3px 2px 15px rgb(162, 162, 162);
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    height: 15px;
+    width: 15px;
+    background-color: gray;
+  }
+  .hand {
+    position: absolute;
+    width: 10px;
+    height: 42%;
+    border-radius: 50%;
+    left: 50%;
+    transform-origin: bottom;
+  }
+  .hours {
+    @include clockHand(26%, darkred, 700);
+  }
+  .minutes {
+    @include clockHand(42%, rgb(20, 63, 0), 800);
+  }
+  .seconds {
+    @include clockHand(36%, rgb(8, 0, 63), 900);
+  }
+  .clock-number {
+    font-size: 36px;
+    font-weight: 700;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    z-index: 1000;
+    transform: translate(-50%, 0);
+    @include clockNumberPosition(1, 7%, 72%, "FirstHalfArea");
+    @include clockNumberPosition(2, 24%, 90%, "FirstHalfArea");
+    @include clockNumberPosition(3, 46%, 97%, "FirstHalfArea");
+    @include clockNumberPosition(4, 24%, 90%, "SecondHalfArea");
+    @include clockNumberPosition(5, 7%, 72%, "SecondHalfArea");
+    @include clockNumberPosition(6, 0%, 50%, "SecondHalfArea");
+    @include clockNumberPosition(7, 7%, 28%, "SecondHalfArea");
+    @include clockNumberPosition(8, 24%, 9%, "SecondHalfArea");
+    @include clockNumberPosition(9, 46%, 3%, "FirstHalfArea");
+    @include clockNumberPosition(10, 24%, 9%, "FirstHalfArea");
+    @include clockNumberPosition(11, 7%, 28%, "FirstHalfArea");
+    @include clockNumberPosition(12, 0%, 50%, "FirstHalfArea");
+  }
+}
+
+

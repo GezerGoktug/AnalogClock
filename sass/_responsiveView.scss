@@ -1,0 +1,43 @@
+@media (max-width: 992px) {
+    .container {
+      margin: 0 10%;
+    }
+    .clock-container {
+      width: 500px;
+      height: 500px;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .container {
+      margin: 0 5%;
+    }
+    .clock-container {
+      width: 400px;
+      height: 400px;
+      .clock-number {
+        font-size: 30px;
+      }
+    }
+  }
+@media (max-width: 468px) {
+    .clock-container {
+      width: 300px;
+      height: 300px;
+      .clock-number {
+        font-size: 24px;
+      }
+    }
+  }
+@media (max-width: 360px) {
+    .clock-container {
+      width: 200px;
+      height: 200px;
+      .clock-number {
+        font-size: 18px;
+      }
+      .hand {
+        width: 7px;
+      }
+    }
+  }
